@@ -29,8 +29,14 @@ return array;
 
 
 function findBy(array, findFn) {
-  find([array], (s) => s.length);}
-
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === findFn()) {
+      return array[i];
+    
+   }
+  }  
+    return null;
+}
 
 
 
